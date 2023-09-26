@@ -5,3 +5,22 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
     id 'maven-publish'
 }
+apply plugin: "java"
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'org.gradle.sample'
+            artifactId = 'library'
+            version = '0.0.4'
+
+            from components.java
+        }
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
