@@ -10,7 +10,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        minSdk 24
+        minSdk 22
         targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -44,7 +44,7 @@ android {
             mavenJava(MavenPublication) {
                 groupId = "com.github.mittay"
                 artifactId = "LoggerS"
-                version = "0.0.5"
+                version = "0.0.6"
 
                 afterEvaluate {
                     from(components["release"])
