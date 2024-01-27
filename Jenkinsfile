@@ -4,6 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo 'build echo'
+                sh "./gradlew assembleDebug"
                 echo 'build ddecho'
             }
         }
