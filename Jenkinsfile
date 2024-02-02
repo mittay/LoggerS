@@ -1,12 +1,15 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
-            steps {
+         stage('Setup') { 
+              steps {
                 echo 'Compile project'
                 sh "chmod +x gradlew"
                 sh "./gradlew clean build --no-daemon"
                 }
+         }
+        stage('Build') { 
+           
             steps {
                 echo 'build echo'
                 sh "./gradlew assembleDebug"
