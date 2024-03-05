@@ -21,7 +21,7 @@ object FileLogTree : Timber.DebugTree() {
         MutableSharedFlow<Pair<String?, String>>(replay = 64, extraBufferCapacity = 1024)
     private val scope = CoroutineScope(Dispatchers.IO)
 
-    private const val DATE_FORMAT = "dd-MM-yyyy hh:mm:ss.SSS"
+    private const val DATE_FORMAT = "MM-dd HH:mm:ss.SSS"
     private var log: LoggerSio? = null
 
     init {
